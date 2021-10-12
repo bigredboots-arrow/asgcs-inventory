@@ -5,19 +5,19 @@ import {
   ViewChild,
   ElementRef,
   Output,
-  EventEmitter
+  EventEmitter,
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { takeUntil, filter } from 'rxjs/operators';
 import { GlobalConstants } from '../../../common/global-constants';
 import { SidePanelService } from '../../../core/';
-import { SidePanelState } from '../../../core/';
+import { SidePanelState } from './../../../core/';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
   private _subscriptionsSubject$: Subject<void>;
@@ -65,11 +65,11 @@ export class HeaderComponent implements OnInit {
     this._sidePanelService.panelStateChanges
       .pipe(takeUntil(this._subscriptionsSubject$))
       .subscribe((state: SidePanelState) => (this.currentPanelState = state));
-    this.breadcrumbService.currentModule$.subscribe(parent => {
+    this.breadcrumbService.currentModule$.subscribe((parent) => {
       this.myBreadCrumb = parent;
     });
 
-    this.breadcrumbService.filter$.subscribe(hideFilters => {
+    this.breadcrumbService.filter$.subscribe((hideFilters) => {
       this.hideFilters = hideFilters;
     });
   }

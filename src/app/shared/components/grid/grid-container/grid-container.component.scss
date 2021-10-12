@@ -375,6 +375,23 @@
   flex-direction: column;
   justify-content: center;
 
+  &.summary {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    display: grid;
+
+    .sum {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid $grey-lightest;
+      &:nth-child(-n + 2) {
+        border-top: none;
+      }
+      &:nth-child(even) {
+        border-left: 1px solid $grey-lightest;
+      }
+    }
+  }
   .lines-value {
     display: flex;
     align-items: center;
