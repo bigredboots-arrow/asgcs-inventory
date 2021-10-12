@@ -267,5 +267,59 @@
         </div>
       </div>
     </div>
+    <!--THIS FILTER SHOULD SHOW FOR JUST INVENTORY -->
+    <div class="filter-block inventoryfilters" [ngClass]="{'d-none': hideFilters}" #inventoryfilters *ngIf="module=='inventory'">
+    <div class="filters" (click)="toggleInventoryFilters()">
+      <span class="filter-title">Filters</span>
+      <span class="filter-close">+</span>
+    </div>
+    <div class="overview-filters">
+      <div class="filter-container">
+        <div class="block-filters">
+          <div class="filter-item">
+            <div class="filter-label">Supplier</div>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">Supplier</span>
+            <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+            </span>
+            </span>
+          </div>
+          <div class="filter-item">
+            <div class="filter-label">Dates</div>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">1 year</span>
+            <span class="k-select">
+                <span class="k-icon k-i-arrow-s"></span>
+            </span>
+            </span>
+          </div>
+
+          <div class="filter-item">
+            <div class="filter-label">Type</div>
+            <span class="k-dropdown-wrap">
+              <span class="k-input">Type</span>
+            <span class="k-select"
+                ><span class="k-icon k-i-arrow-s"></span></span>
+            </span>
+          </div>
+
+          <div class="filter-item">
+            <div class="filter-label">Warehouse Name</div>
+            <span class="k-dropdown-wrap"
+              ><span class="k-input">All Warehouses</span>
+            <span class="k-select"
+                ><span class="k-icon k-i-arrow-s"></span></span></span>
+          </div>
+        </div>
+
+        <div class="block-filterbuttons">
+          <button kendobutton="" class="secondary">Reset</button>
+          <button kendobutton="" class="blue">Apply</button>
+          <div class="close-filters" (click)="toggleInventoryFilters()">+</div>
+        </div>
+      </div>
+    </div>
+  </div>
   </ng-container>
 </div>

@@ -28,8 +28,8 @@ import { OutboundReportsLocationsComponent } from './pages/outbound/outbound-rep
 import { OutboundReportsTotaldemandComponent } from './pages/outbound/outbound-reports-totaldemand/outboundReportsTotaldemand.component';
 import { OutboundReportsWavechartComponent } from './pages/outbound/outbound-reports-wavechart/outboundReportsWavechart.component';
 import { OutboundReportsProfileComponent } from './pages/outbound/outbound-reports-profile/outboundReportsProfile.component';
-
 import { HubsComponent } from './pages/hubs/hubs/hubs.component';
+import { InventoryComponent } from './pages/inventory/inventory/inventory.component';
 
 import { SettingsComponent } from './pages/settings/settings/settings.component';
 
@@ -56,6 +56,7 @@ import 'hammerjs';
     DemandReportsWavechartComponent,
     DemandReportsTotalDemandComponent,
     HubsComponent,
+    InventoryComponent,
     SettingsComponent,
     DemandReportsLocationsComponent,
     DemandReportsProfileComponent,
