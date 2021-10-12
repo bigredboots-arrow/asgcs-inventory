@@ -1,0 +1,116 @@
+@import './app/scss/icons';
+@import './app/scss/global';
+
+:focus {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  background: $grey-color;
+  color: $grey-lighter;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+  font-size: $base-font;
+}
+a {
+  color: $grey-lighter;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+// /* Scrollbar on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $grey-light $grey-darkest;
+}
+/* Scrollbar on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: $black;
+  border: 1px solid $grey-light;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $grey-lighter;
+  border-radius: 0px;
+  border: 1px solid $grey-light;
+}
+*::-webkit-scrollbar-button {
+  background: $blue-color;
+  color: $white;
+}
+
+//Temporary theme for Kendo UI drop downs
+.k-input {
+  padding: 0px 5px;
+  background: $grey-lightest;
+  color: $black;
+  font-size: $small-font;
+  border-radius: 5px 0px 0px 5px;
+  display: flex;
+  align-items: center;
+}
+.k-select {
+  background: $grey-lightest;
+  height: 24px;
+  border-radius: 0px 5px 5px 0px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border-left: 1px solid $grey-light;
+}
+.k-dropdown-wrap {
+  padding: 0px;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  box-sizing: border-box;
+  position: relative;
+  transition: $fast-transition;
+  cursor: pointer;
+  outline: 0;
+  background: $blue-color;
+  background-color: transparent;
+  background-image: none;
+}
+.k-icon {
+  width: 0px;
+  height: 0px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid $grey-darker;
+}
+@media only screen and (max-width: 1200px) {
+  .main-content.open .left-side-content .k-input span,
+  .main-content.mobile .left-side-content .k-input span {
+    display: none;
+  }
+  .main-content.open [gridCell] {
+    grid-column: span 3 !important;
+  }
+}
+
+.k-chart-surface {
+  min-height: 200px;
+}
+.k-chart-surface svg {
+  overflow: visible !important;
+}
+.external-ui-link {
+  position: absolute;
+  background: rgba(0, 0, 255, .7);
+  border: 1px solid white;
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  transform: rotate(-12deg);
+}

@@ -1,0 +1,5 @@
+.breadcrumb-label {
+  text-decoration: none;
+  list-style: none;
+  display: inline-flex;
+}
